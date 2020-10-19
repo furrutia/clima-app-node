@@ -19,7 +19,7 @@ const getInfo = async(direccion) => {
         const temp = await clima.getClima(coords.lat, coords.lng);
         return `El clima de ${ coords.direccion } es de ${ temp }`;
     } catch (error) {
-        return `No se pudo determinar el clima de ${ direccion }`;
+        return `No se pudo determinar el clima de ${ direccion }. Error: ${error}`;
     }
 }
 
